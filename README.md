@@ -1,30 +1,68 @@
-# React + TypeScript + Vite
+# Vite starter - React.js | TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Vite starter for React.js + TypeScript projects. It is entended to be used together with `degit` to speed up the workflow of starting a new project from scratch.
 
-Currently, two official plugins are available:
+This approach is much quicker than using `git clone`, because you're not downloading the entire git history!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting started
 
-## Expanding the ESLint configuration
+`degit` allows to make copies of git repositories, which is very handy to your project with a template
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1. Create a local copy from a github repo
 
-- Configure the top-level `parserOptions` property like this:
+> **_NOTE:_** you can use `npx` as an alternative to a global installation.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+First install [`degit`] globally using your favorite package manager:
+
+```console
+yarn global add degit
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Then download a copy of a Github repo to your current working directory:
+
+```console
+degit user/repo
+
+# these commands are equivalent
+degit github:user/repo
+degit git@github.com:user/repo
+degit https://github.com/user/repo
+```
+
+> **_NOTE:_** the default branch is `main`. Please refer to the official [documentation](https://github.com/Rich-Harris/degit) to see all the available options.
+
+### 2. Install the project dependencies
+
+Initialize your project by installing all the required dependencies:
+
+```console
+yarn install
+```
+
+### 3. Initialize a local git repository
+
+Create your own local repo:
+
+```console
+git init
+```
+
+### 4. Start coding
+
+Start the dev server:
+
+```console
+yarn dev
+```
+
+### 5. Build for productions
+
+Prepare your app for production (build to the `dist` folder):
+
+```console
+yarn build
+```
+
+## Author
+
+- Github - [@ddZ6ii](https://github.com/ddZ6ii)
