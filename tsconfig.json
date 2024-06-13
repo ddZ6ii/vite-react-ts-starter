@@ -11,15 +11,35 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
+      "@reducers/*": ["reducers/*"],
+      "@stores/*": ["stores/*"],
+      "@tests/*": ["tests/*"],
+      "@themes/*": ["themes/*"],
+      "@types/*": ["types/*"],
+      "@utils/*": ["utils/*"]
+    },
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true
   },
   "include": ["src"],
+  "exclude": ["dist", "node_modules", "public"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
