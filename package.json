@@ -1,13 +1,20 @@
 {
   "name": "vite-react-ts-starter",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "vite starter for react | typescript project",
+  "author": "Denis Dezest <denis.dezest@gmail.com>",
+  "repository": "git@github.com:ddZ6ii/vite-react-ts-starter.git",
+  "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --host --open",
+    "build": "yarn run format:lint && npx tsc && vite build",
+    "format": "prettier --write .",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "format:lint": "yarn run format && yarn run lint",
+    "preview": "vite preview --host --open",
+    "build:preview": "yarn run build && yarn run preview"
   },
   "dependencies": {
     "react": "^18.2.0",
