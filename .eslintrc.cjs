@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/strict",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs", "node_modules", "public"],
   parser: "@typescript-eslint/parser",
@@ -17,7 +18,7 @@ module.exports = {
     project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-  plugins: ["react-refresh", "import"],
+  plugins: ["react-refresh", "import", "jsx-a11y"],
   rules: {
     "react-refresh/only-export-components": [
       "warn",
