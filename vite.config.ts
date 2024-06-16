@@ -29,6 +29,7 @@ export default defineConfig({
       "@pages": resolve(join(__dirname, "src", "pages")),
       "@reducers": resolve(join(__dirname, "src", "reducers")),
       "@stores": resolve(join(__dirname, "src", "stores")),
+      "@tests": resolve(join(__dirname, "src", "tests")),
       "@themes": resolve(join(__dirname, "src", "themes")),
       "@types": resolve(join(__dirname, "src", "types")),
       "@utils": resolve(join(__dirname, "src", "utils")),
