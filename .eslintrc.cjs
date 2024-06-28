@@ -26,6 +26,15 @@ module.exports = {
     ],
     // Enforce type definition to consistently use type (instead of interface which is default).
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    // Allow async event handlers.
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        checksVoidReturn: {
+          attributes: false,
+        },
+      },
+    ],
   },
   settings: {
     "import/resolver": {
